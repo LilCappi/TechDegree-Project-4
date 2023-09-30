@@ -5,6 +5,6 @@
 const startGameBtn = document.getElementById('btn__reset');
 
 startGameBtn.addEventListener('click', () => {
-    const newPhrase = new Phrase('Hello all');
-    newPhrase.addPhraseToDisplay();
+    const game = new Game();
+    game.startGame();
 })

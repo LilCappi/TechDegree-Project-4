@@ -3,16 +3,25 @@
  * Game.js */
 
 class Game {
-    constructor(missed, phrases, activePhrase) {
-        this.missed = missed;
-        this.phrases = phrases;
-        this.activePhrase = activePhrase;
+    constructor() {
+        this.missed = 0;
+        this.phrases = [
+            new Phrase('Accept yourself'),
+            new Phrase('Life is but a dream'),
+            new Phrase('You are amazing'),
+            new Phrase('What we think we become'),
+            new Phrase('Know your worth')
+        ];
+        this.activePhrase = null;
     }
     startGame() {
-
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none'
+        this.activePhrase = this.getRandomPhrase();
+        this.activePhrase.addPhraseToDisplay();
     }
     getRandomPhrase() {
-
+        return this.phrases[Math.floor(Math.random() * this.phrases.length)];
     }
     handleInteraction() {
 
