@@ -22,9 +22,12 @@ class Phrase {
         phraseUL.insertAdjacentHTML('beforeend', phraseHTML);
     }
     checkLetter(char) {
-        return this.phraseChar.includes(char);
+        return this.phrase.includes(char);
     }
     showMatchedLetter(char) {
-
+        const matchingChar = document.querySelectorAll(`.${char}`);
+        matchingChar.forEach(letter => {
+            letter.className = `show letter ${char}`;
+        })
     }
 }

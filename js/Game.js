@@ -27,10 +27,22 @@ class Game {
 
     }
     removeLife() {
-
+        const heartsLeft = document.querySelectorAll('#scoreboard li');
+        this.missed++;
     }
     checkForWin() {
-        
+        const allLetters = document.querySelectorAll('#phrase li');
+        let numShown = 0;
+        allLetters.forEach(show => {
+            if (show.className.includes('space') || show.className.includes('show')) {
+                numShown += 1;
+            }
+        })
+        if (numShown === allLetters.length) {
+            return didWin = true;
+        } else {
+            return didWin = false;
+        }
     }
     gameover() {
 
