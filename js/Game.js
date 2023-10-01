@@ -27,7 +27,9 @@ class Game {
 
     }
     removeLife() {
-        const heartsLeft = document.querySelectorAll('#scoreboard li');
+        const heartContainers = document.querySelectorAll('#scoreboard li');
+        const heartLost = heartContainers[this.missed];
+        heartLost.innerHTML = '<img src="images/lostHeart.png" alt="Heart Icon" height="35" width="30"></img>';
         this.missed++;
     }
     checkForWin() {
