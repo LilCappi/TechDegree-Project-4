@@ -60,6 +60,7 @@ class Phrase {
     *   'matchingChar' is set to all 'li' elements with the class {char}
     *   'matchingChar' is then itterated thorugh:
     *       Sets each 'li' class to 'show letter {char}
+    *       Adds 100 points to the players score
     */
 
     showMatchedLetter(char) {
