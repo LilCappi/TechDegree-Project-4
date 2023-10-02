@@ -109,7 +109,7 @@ class Game {
 
     removeLife() {
         const heartLost = heartContainers[this.missed];
-        heartLost.innerHTML = '<img src="images/lostHeart.png" alt="Heart Icon" height="35" width="30"></img>';
+        heartLost.innerHTML = '<img src="images/lostHeart.png" alt="Heart Icon" height="35" width="30">';
         this.missed++;
         if (this.missed === 5) {
             this.gameover(false);
@@ -185,7 +185,7 @@ class Game {
             key.removeAttribute('disabled');
         });
         heartContainers.forEach(heart => {
-            heart.innerHTML = '<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30"></img>';
+            heart.innerHTML = '<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">';
         });
     }
 }
