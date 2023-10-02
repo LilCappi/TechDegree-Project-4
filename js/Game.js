@@ -10,6 +10,7 @@
 const overlay = document.getElementById('overlay');
 const heartContainers = document.querySelectorAll('#scoreboard li');
 const keyboardBtn = document.querySelectorAll('#qwerty button');
+const playerTotalScore = document.querySelector('.score');
 
 /*  Game Class
 *
@@ -58,8 +59,17 @@ class Game {
         overlay.style.display = 'none'
         this.activePhrase = this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
+        this.setPlayersScore();
     }
 
+    /*  setPlayerScore()
+    *
+    *   This function sets the players score in the 'h3' element in the #banner 'div'
+    */
+
+    setPlayersScore() {
+        playerTotalScore.innerHTML = `Players Score: ${playerScore}`;
+    }
     /*  getRandomPhrase()
     *
     *   This function selects a phrase from 'phrases' at random
@@ -78,6 +88,7 @@ class Game {
     *   Checks if the 'activePhrase' contains the 'btnValue', if so:
     *       Set add the 'chosen' class to button
     *       Run the 'btnValue' through the 'showMatchedLetter' function
+    *       Run the 'setPlayerScore' function
     *       Run the 'checkForWin' function
     *   else:
     *       Add the 'wrong' class to button
@@ -91,6 +102,7 @@ class Game {
         if (this.activePhrase.checkLetter(btnValue)) {
             button.classList.add('chosen');
             this.activePhrase.showMatchedLetter(btnValue);
+            this.setPlayersScore();
             this.checkForWin();
         } else {
             button.classList.add('wrong');
@@ -104,14 +116,17 @@ class Game {
     *   Sets the 'heartLost' to the selected scoreboard heart based on the number of times missed (thus heartContainers[index])
     *   Sets the 'heartLost' innerHTML to replace the heart image with a 'lostHeart' image
     *   Deducts 100 points from player score
+    *   Run the 'setPlayerScore' function
     *   Increments 'missed'
-    *   Then checks the value of 'missed' and if it is equal to '5', then runs 'gameover' function with the boolean param 'false' (player lost)
+    *   Then checks the value of 'missed' and if it is equal to '5'
+    *       Run 'gameover' function with the boolean param 'false' (player lost)
     */
 
     removeLife() {
         const heartLost = heartContainers[this.missed];
         heartLost.innerHTML = '<img src="images/lostHeart.png" alt="Heart Icon" height="35" width="30">';
         playerScore -= 100;
+        this.setPlayersScore();
         this.missed++;
         if (this.missed === 5) {
             this.gameover(false);
@@ -154,6 +169,7 @@ class Game {
     *   Else player wins the game
     *       Sets '--color-win' var in CSS to a random color hex
     *       Sets overlay class to 'win'
+    *       For each key that was not disabled, add 50 points to players score
     *       'gameOverMessage' innerHTML is set to a winning message
     *       Then runs 'reset' function
     */
@@ -164,12 +180,17 @@ class Game {
         overlay.style.display = 'block';
         if (gameWon !== true) {
             overlay.className = 'lose';
-            gameOverMessage.innerHTML = `Sorry, you've lost!<br>The phrase was: "${thePhrase}"<br>Your score was: ${playerScore}`;
+            gameOverMessage.innerHTML = `Sorry, you've lost!<br>The phrase was: "${thePhrase}"<br>Your final score was: ${playerScore}`;
             playerScore = 0;
             this.reset();
         } else {
             document.documentElement.style.setProperty('--color-win', randColorHex(randomNumberGenerator(250), randomNumberGenerator(250), randomNumberGenerator(250)));
             overlay.className = 'win';
+            keyboardBtn.forEach (key => {
+                if (key.disabled !== true) {
+                    playerScore += 50;
+                }
+            })
             gameOverMessage.innerHTML = `You've won!<br>The phrase was: "${thePhrase}"<br>Your score was: ${playerScore}`
             this.reset();
         };

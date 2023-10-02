@@ -3,6 +3,7 @@
  * app.js */
 
 // Variable that will hold the 'Game' object created when the 'Start Game' button is clicked.
+// Variable that will hold the players total score
 
 let guessThatShonen;
 let playerScore = 0;
@@ -56,9 +57,13 @@ keyboard.addEventListener('click', (e) => {
     }
 })
 
-// This event listener will trigger when a player keys any key on their keyboard.
-// It will first go through a validator and if it passes, will then be sent through 
-// the game's 'handleInteraction' function.
+/* This event listener will trigger when a player keys any key on their keyboard.
+* 
+*   If the overlay is not displayed
+*       Itterate through the onscreen keyboard and find the key that matches 'key.innerHTML' and set it to 'keyboardKey'
+*   If 'keyboardKey' is not disabled already
+*       Run 'handleInteraction' passing 'keyboardKey' as a parameter
+*/ 
 
 document.addEventListener('keyup', (e) => {
     const pressedKey = e.key.toLowerCase();
@@ -69,7 +74,9 @@ document.addEventListener('keyup', (e) => {
                 keyboardKey = key;
             }
         });
-        guessThatShonen.handleInteraction(keyboardKey);
+        if (keyboardKey.disabled !== true){
+            guessThatShonen.handleInteraction(keyboardKey);
+        }
     }
 })
 
