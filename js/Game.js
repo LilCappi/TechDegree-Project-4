@@ -23,11 +23,26 @@ class Game {
     constructor() {
         this.missed = 0;
         this.phrases = [
-            new Phrase('Accept yourself'),
-            new Phrase('Life is but a dream'),
-            new Phrase('You are amazing'),
-            new Phrase('What we think we become'),
-            new Phrase('Know your worth')
+            new Phrase('Jujutsu Kaisen'),
+            new Phrase('Dragon ball Z'),
+            new Phrase('My hero Academia'),
+            new Phrase('Undead Unluck'),
+            new Phrase('Misson Yozakura Family'),
+            new Phrase('Spy x Family'),
+            new Phrase('One Punch Man'),
+            new Phrase('Chainsaw Man'),
+            new Phrase('One Piece'),
+            new Phrase('Naruto'),
+            new Phrase('Pokemon'),
+            new Phrase('YuYu Hakusho'),
+            new Phrase('Black Clover'),
+            new Phrase('Mashle Magic and Muscle'),
+            new Phrase('Demon Slayer'),
+            new Phrase('Tokyo Ghoul'),
+            new Phrase('Hunter x Hunter'),
+            new Phrase('Dr Stone'),
+            new Phrase('Death Note'),
+            new Phrase('Bleach')
         ];
         this.activePhrase = null;
     }

@@ -4,7 +4,7 @@
 
 // Variable that will hold the 'Game' object created when the 'Start Game' button is clicked.
 
-let phraseHunter;
+let guessThatShonen;
 
 // Variables for the 'Start Game' button and the onscreen keyboard
 
@@ -41,8 +41,8 @@ function randColorHex(r, g, b) {
 // This will create a new instance of the game and call the new game's 'startGame' function.
 
 startGameBtn.addEventListener('click', () => {
-    phraseHunter = new Game();
-    phraseHunter.startGame();
+    guessThatShonen = new Game();
+    guessThatShonen.startGame();
 })
 
 // This event listener will trigger when any of the letter keys of the onscreen keyboard
@@ -51,7 +51,7 @@ startGameBtn.addEventListener('click', () => {
 keyboard.addEventListener('click', (e) => {
     const button = e.target.closest('button');
     if (button) {
-        phraseHunter.handleInteraction(button);
+        guessThatShonen.handleInteraction(button);
     }
 })
 
@@ -68,7 +68,7 @@ document.addEventListener('keyup', (e) => {
                 keyboardKey = key;
             }
         });
-        phraseHunter.handleInteraction(keyboardKey);
+        guessThatShonen.handleInteraction(keyboardKey);
     }
 })
 
