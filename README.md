@@ -18,7 +18,7 @@ Object-oriented program is the bases for this project.
 ## Features
 ### 'Keyup' event
 
-This will allow players to utilize their own keybard rather than rely on the onscreen keyboard
+This will allow players to utilize their own keyboard rather than rely on the onscreen keyboard
 
 ### Personal stylization
 
@@ -42,7 +42,7 @@ Some styles set in the base of the CSS form have been changed to personalize the
 
 .start background-color = #30429b(dark grey-blue) (original #3a3f58)
 
-*__ADDED__* #game-over-message white-space: pre-line (then added a new line to the gameOverMessage to display the phrase the player was trying to guess
+*__ADDED__* #game-over-message white-space: pre-line (then added a new line to the gameOverMessage to display the phrase the player was trying to guess)
 
 ### Random winning background color
 
