@@ -1,5 +1,5 @@
 # TechDegree-Project-4
-TechDegree Project 4 (OOP Game Show App)
+TechDegree Project 4 (OOP Game Show App) *__"Guess that Shonen"__*
 
 ![PhraseHunter](https://github.com/LilCappi/TechDegree-Project-4/assets/110640816/662cb4c7-413f-4307-a80a-967c6cc84e79)
 ## About this project
@@ -20,6 +20,10 @@ Object-oriented program is the bases for this project.
 This will allow players to utilize their own keybard rather than rely on the onscreen keyboard
 
 ### Personal stylization
+
+I've changed the name of the project from 'Phase Hunter' to 'Guess that Shonen'.
+
+I also included 15 new 'phrases' or titles of shonen manga/anime to help diversify the phrases a player could guess from.
 
 Some styles set in the base of the CSS form have been changed to personalize the application, such as:
 
