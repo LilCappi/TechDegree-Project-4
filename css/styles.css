@@ -104,20 +104,20 @@ button {
 }
 
 .space {
-  width: 15px;
+  width: 30px;
 }
 
 
 
 .show {
   color: #fff;
-  background-color: #4ac0d5;
+  background-color: #243d91;
   font-size: 20px;
   height: 65px;
   width: 65px;
   padding: 20px 1px 0 1px;
   margin-right: 2px;
-  border-radius: 5px;
+  border-radius: 50px;
   -webkit-animation-duration: .5s;
   animation-duration: .5s;
 }
@@ -131,14 +131,14 @@ button {
 }
 
 .chosen {
-  background: #3a3f58;
+  background: #3b9233;
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
 }
 
 .wrong {
-  background: #f7a964;
+  background: #c43333;
   color: #FFFFFF;
 }
 
@@ -180,7 +180,7 @@ button {
 }
 
 .start {
-  background-color: #3a3f58;
+  background-color: #30429b;
 }
 
 .start a {
