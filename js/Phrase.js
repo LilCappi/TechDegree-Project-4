@@ -66,6 +66,7 @@ class Phrase {
         const matchingChar = document.querySelectorAll(`.${char}`);
         matchingChar.forEach(letter => {
             letter.className = `show letter ${char}`;
+            playerScore += 100;
         })
     }
 }

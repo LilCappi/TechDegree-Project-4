@@ -85,7 +85,7 @@ class Game {
     */
 
     handleInteraction(button) {
-        button.disabled = 'true';
+        button.disabled = true;
         const btnValue = button.innerText;
 
         if (this.activePhrase.checkLetter(btnValue)) {
@@ -110,6 +110,7 @@ class Game {
     removeLife() {
         const heartLost = heartContainers[this.missed];
         heartLost.innerHTML = '<img src="images/lostHeart.png" alt="Heart Icon" height="35" width="30">';
+        playerScore -= 100;
         this.missed++;
         if (this.missed === 5) {
             this.gameover(false);
@@ -160,12 +161,13 @@ class Game {
         overlay.style.display = 'block';
         if (gameWon !== true) {
             overlay.className = 'lose';
-            gameOverMessage.innerHTML = `Sorry, you've lost!<br>The phrase was: "${thePhrase}"`;
+            gameOverMessage.innerHTML = `Sorry, you've lost!<br>The phrase was: "${thePhrase}"<br>Your score was: ${playerScore}`;
+            playerScore = 0;
             this.reset();
         } else {
             document.documentElement.style.setProperty('--color-win', randColorHex(randomNumberGenerator(250), randomNumberGenerator(250), randomNumberGenerator(250)));
             overlay.className = 'win';
-            gameOverMessage.innerHTML = `You've won!<br>The phrase was: "${thePhrase}"`
+            gameOverMessage.innerHTML = `You've won!<br>The phrase was: "${thePhrase}"<br>Your score was: ${playerScore}`
             this.reset();
         };
     }

@@ -5,6 +5,7 @@
 // Variable that will hold the 'Game' object created when the 'Start Game' button is clicked.
 
 let guessThatShonen;
+let playerScore = 0;
 
 // Variables for the 'Start Game' button and the onscreen keyboard
 
