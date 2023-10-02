@@ -1,7 +1,7 @@
 # TechDegree-Project-4
 TechDegree Project 4 (OOP Game Show App) *__"Guess that Shonen"__*
 
-![Guess_that_Shonen](https://github.com/LilCappi/TechDegree-Project-4/assets/110640816/bd226b32-1874-41af-9735-4b7fd81d49b4)
+![Guess_that_Shonen](https://github.com/LilCappi/TechDegree-Project-4/assets/110640816/d6eadcb9-4c82-4f16-90ce-3ade3eb11c6a)
 
 ## About this project
 
@@ -16,6 +16,13 @@ Object-oriented program is the bases for this project.
 * Displaying correct input selections from a random 'phrase'
 
 ## Features
+
+### Player Score
+
+Added a neat feature for players to accumulate a score based on the number of matching letters and the number of unused letters.
+
+Players will continue to accumulate a score each time they guess a phrase correctly but beware: If a player loses the game, their score will also be lost.
+
 ### 'Keyup' event
 
 This will allow players to utilize their own keyboard rather than rely on the onscreen keyboard
