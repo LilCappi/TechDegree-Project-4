@@ -28,6 +28,7 @@ Some styles set in the base of the CSS form have been changed to personalize the
 .show background-color = #243d91(Dark blue) (original #4ac0d5(light grey-blue))
 
 .show border-radius = 50px (original 5px) 
+
 *(wanted a more round display when a matching letter is displayed to differintiate shown letters and hidden letters)*
 
 .chosen background = #3b9233(green for correct) (original #3a3f58)
@@ -39,6 +40,8 @@ Some styles set in the base of the CSS form have been changed to personalize the
 ### Random winning background color
 
 A random background color is also substituted whenever a player wins rather than displaying the same background.
+
 This utitlizes several functions within the code (componentToHex, randColorHex, and randomNumberGenerator) to replace the '--color-win' variable set in the CSS
+
 *(website cited within the 'App.js' file where function 'componentToHex' and 'randColorHex' came from)*
 
