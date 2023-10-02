@@ -70,6 +70,7 @@ class Game {
     setPlayersScore() {
         playerTotalScore.innerHTML = `Players Score: ${playerScore}`;
     }
+    
     /*  getRandomPhrase()
     *
     *   This function selects a phrase from 'phrases' at random
