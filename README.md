@@ -22,7 +22,7 @@ This will allow players to utilize their own keybard rather than rely on the ons
 
 ### Personal stylization
 
-I've changed the name of the project from 'Phase Hunter' to 'Guess that Shonen'.
+I've changed the name of the project from 'Phrase Hunter' to 'Guess that Shonen'.
 
 I also included 15 new 'phrases' or titles of shonen manga/anime to help diversify the phrases a player could guess from.
 
