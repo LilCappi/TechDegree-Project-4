@@ -144,12 +144,12 @@ class Game {
         overlay.style.display = 'block';
         if (gameWon !== true) {
             overlay.className = 'lose';
-            gameOverMessage.innerHTML = `Sorry, you've lost!`;
+            gameOverMessage.innerHTML = `Sorry, you've lost!<br>The phrase was: "${this.activePhrase.phrase}"`;
             this.reset();
         } else {
             document.documentElement.style.setProperty('--color-win', randColorHex(randomNumberGenerator(250), randomNumberGenerator(250), randomNumberGenerator(250)));
             overlay.className = 'win';
-            gameOverMessage.innerHTML = `You've won!`
+            gameOverMessage.innerHTML = `You've won!<br>The phrase was: "${this.activePhrase.phrase}"`
             this.reset();
         };
     }
