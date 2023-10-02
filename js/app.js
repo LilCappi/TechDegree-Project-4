@@ -62,8 +62,7 @@ keyboard.addEventListener('click', (e) => {
 document.addEventListener('keyup', (e) => {
     const pressedKey = e.key.toLowerCase();
     let keyboardKey = null;
-    const checkIfLetter = /[a-zA-Z]/.test(pressedKey);
-    if (checkIfLetter && overlay.style.display === 'none') {
+    if (overlay.style.display === 'none') {
         keyboardBtn.forEach (key => {
             if (key.innerHTML === pressedKey) {
                 keyboardKey = key;
