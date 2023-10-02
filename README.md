@@ -1,7 +1,8 @@
 # TechDegree-Project-4
 TechDegree Project 4 (OOP Game Show App) *__"Guess that Shonen"__*
 
-![PhraseHunter](https://github.com/LilCappi/TechDegree-Project-4/assets/110640816/662cb4c7-413f-4307-a80a-967c6cc84e79)
+![Guess_that_Shonen](https://github.com/LilCappi/TechDegree-Project-4/assets/110640816/bd226b32-1874-41af-9735-4b7fd81d49b4)
+
 ## About this project
 
 This project is the fourth in the Team Treehouse TechDegree Full-Stack JavaScript course.
