@@ -103,6 +103,7 @@ class Game {
     *   This function:
     *   Sets the 'heartLost' to the selected scoreboard heart based on the number of times missed (thus heartContainers[index])
     *   Sets the 'heartLost' innerHTML to replace the heart image with a 'lostHeart' image
+    *   Deducts 100 points from player score
     *   Increments 'missed'
     *   Then checks the value of 'missed' and if it is equal to '5', then runs 'gameover' function with the boolean param 'false' (player lost)
     */
@@ -143,15 +144,17 @@ class Game {
     *
     *   This function changes the overlay based on whether the player won or lost
     *   Sets 'gameOverMessage' to the overlay 'h1' element
+    *   Sets 'thePhrase' to the current 'activePhrase' in all caps
     *   Sets overlay display to 'block'
     *   If player did not win the game
     *       Sets overlay class to 'lose' 
-    *       'gameOverMessage' innerHTML is set to the message 'Sorry, you've lost!
+    *       'gameOverMessage' innerHTML is set to the message to a losing message
+    *       Resets 'playerScore' back to zero
     *       Then runs 'reset' function
     *   Else player wins the game
     *       Sets '--color-win' var in CSS to a random color hex
     *       Sets overlay class to 'win'
-    *       'gameOverMessage' innerHTML is set to the message 'You've won!'
+    *       'gameOverMessage' innerHTML is set to a winning message
     *       Then runs 'reset' function
     */
 
