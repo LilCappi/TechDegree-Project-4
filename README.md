@@ -16,6 +16,13 @@ Object-oriented program is the bases for this project.
 * Displaying correct input selections from a random 'phrase'
 
 ## Features
+
+### Player Score
+
+Added a neat feature for players to accumulate a score based on the number of matching letters and the number of unused letters.
+
+Players will continue to accumulate a score each time they guess a phrase correctly but beware: If a player loses the game, their score will also be lost.
+
 ### 'Keyup' event
 
 This will allow players to utilize their own keyboard rather than rely on the onscreen keyboard
