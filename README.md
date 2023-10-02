@@ -37,6 +37,8 @@ Some styles set in the base of the CSS form have been changed to personalize the
 
 .start background-color = #30429b(dark grey-blue) (original #3a3f58)
 
+*__ADDED__* #game-over-message white-space: pre-line (then added a new line to the gameOverMessage to display the phrase the player was trying to guess
+
 ### Random winning background color
 
 A random background color is also substituted whenever a player wins rather than displaying the same background.
