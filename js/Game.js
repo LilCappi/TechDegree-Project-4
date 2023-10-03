@@ -30,7 +30,7 @@ class Game {
             new Phrase('Dragon ball Z', 'Kamehameha'),
             new Phrase('My hero Academia', 'One for all'),
             new Phrase('Undead Unluck', 'One little touch is enough to strike a crazy amount of bad luck'),
-            new Phrase('Misson Yozakura Family', 'Older brother with a dangerously bad sister complex'),
+            new Phrase('Mission Yozakura Family', 'Older brother with a dangerously bad sister complex'),
             new Phrase('Spy x Family', 'Agent Twilight'),
             new Phrase('One Punch Man', 'Caped Baldy'),
             new Phrase('Chainsaw Man', 'Dreaming about eating bread with jam smothered on it'),
