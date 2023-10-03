@@ -28,8 +28,9 @@ Each hint is specific to the phrase so no two hints are alike.
 Added a neat feature for players to accumulate a score based on the number of matching letters and the number of unused letters.
 
 Players will continue to accumulate a score each time they guess a phrase correctly, for each letter not clicked on while guessing, and if the player can guess the phrase without 
+triggering the hint. 
 
-triggering the hint. Beware: If a player loses the game, their score will also be lost.
+Beware: Players will lose points for each incorrect guess and if a player loses the game, their score will also be lost.
 
 ### 'Keyup' event
 
