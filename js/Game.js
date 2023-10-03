@@ -130,7 +130,9 @@ class Game {
     removeLife() {
         const heartLost = heartContainers[this.missed];
         heartLost.innerHTML = '<img src="images/lostHeart.png" alt="Heart Icon" height="35" width="30">';
-        playerScore -= 100;
+        if (playerScore > 0) {
+            playerScore -= 100;
+        }
         this.setPlayersScore();
         this.missed++;
         if (this.missed === 3) {
