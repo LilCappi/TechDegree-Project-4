@@ -70,7 +70,7 @@ class Game {
     */
 
     setPlayersScore() {
-        playerTotalScore.innerHTML = `Players Score: ${playerScore}`;
+        playerTotalScore.innerHTML = `Player's Score: ${playerScore}`;
     }
     
     /*  getRandomPhrase()
