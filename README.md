@@ -1,7 +1,7 @@
 # TechDegree-Project-4
 TechDegree Project 4 (OOP Game Show App) *__"Guess that Shonen"__*
 
-![Guess_that_Shonen](https://github.com/LilCappi/TechDegree-Project-4/assets/110640816/d6eadcb9-4c82-4f16-90ce-3ade3eb11c6a)
+![Guess_that_Shonen](https://github.com/LilCappi/TechDegree-Project-4/assets/110640816/587dd174-cc88-48c9-9a72-902eb1c3124d)
 
 ## About this project
 
