@@ -62,9 +62,25 @@ Some styles set in the base of the CSS form have been changed to personalize the
 
 #game-over-message white-space: pre-line (then added a new line to the gameOverMessage to display the phrase the player was trying to guess)
 
-#hint color: #942cb4 font-size: x-large
+#hint color: #942cb4 
 
-#score border: 2px solid transparent background-color: #b9e618 padding: 8px 8px 8px 8px width: 200px margin: auto margin-top: 20px border-radius: 5px font-size: x-large
+font-size: x-large
+
+#score border: 2px solid transparent 
+
+background-color: #b9e618 
+
+padding: 8px 8px 8px 8px 
+
+width: 200px 
+
+margin: auto 
+
+margin-top: 20px 
+
+border-radius: 5px 
+
+font-size: x-large
 
 ### Random winning background color
 
