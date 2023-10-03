@@ -6,11 +6,13 @@
 // Overlay
 // Player's hearts
 // Onscreen keyboard buttons
+// Hint area
 
 const overlay = document.getElementById('overlay');
 const heartContainers = document.querySelectorAll('#scoreboard li');
 const keyboardBtn = document.querySelectorAll('#qwerty button');
 const playerTotalScore = document.querySelector('.score');
+const hintArea = document.getElementById('hint');
 
 /*  Game Class
 *
@@ -24,26 +26,26 @@ class Game {
     constructor() {
         this.missed = 0;
         this.phrases = [
-            new Phrase('Jujutsu Kaisen'),
-            new Phrase('Dragon ball Z'),
-            new Phrase('My hero Academia'),
-            new Phrase('Undead Unluck'),
-            new Phrase('Misson Yozakura Family'),
-            new Phrase('Spy x Family'),
-            new Phrase('One Punch Man'),
-            new Phrase('Chainsaw Man'),
-            new Phrase('One Piece'),
-            new Phrase('Naruto'),
-            new Phrase('Pokemon'),
-            new Phrase('YuYu Hakusho'),
-            new Phrase('Black Clover'),
-            new Phrase('Mashle Magic and Muscle'),
-            new Phrase('Demon Slayer'),
-            new Phrase('Tokyo Ghoul'),
-            new Phrase('Hunter x Hunter'),
-            new Phrase('Dr Stone'),
-            new Phrase('Death Note'),
-            new Phrase('Bleach')
+            new Phrase('Jujutsu Kaisen', 'Unlimited Void'),
+            new Phrase('Dragon ball Z', 'Kamehameha'),
+            new Phrase('My hero Academia', 'One for all'),
+            new Phrase('Undead Unluck', 'One little touch is enough to strike a crazy amount of bad luck'),
+            new Phrase('Misson Yozakura Family', 'Older brother with a dangerously bad sister complex'),
+            new Phrase('Spy x Family', 'Agent Twilight'),
+            new Phrase('One Punch Man', 'Caped Baldy'),
+            new Phrase('Chainsaw Man', 'Dreaming about eating bread with jam smothered on it'),
+            new Phrase('One Piece', 'I\'m gonna be king of the pirates!'),
+            new Phrase('Naruto', 'Because that is my nindo, my ninja way!'),
+            new Phrase('Pokemon', 'Gotta catch \'em all!'),
+            new Phrase('YuYu Hakusho', 'Spirit gun'),
+            new Phrase('Black Clover', 'Anti-magic sword'),
+            new Phrase('Mashle Magic and Muscle', 'Pure muscle trumps magic any day'),
+            new Phrase('Demon Slayer', 'Hinokami kagura'),
+            new Phrase('Tokyo Ghoul', 'Only coffee curbs the hunger, but only for so long'),
+            new Phrase('Hunter x Hunter', 'Having the ability to control \'nen\''),
+            new Phrase('Dr Stone', 'Science is the only way to rebuild civilization'),
+            new Phrase('Death Note', 'Writing down their name in the book guarantees death'),
+            new Phrase('Bleach', 'Bankai!')
         ];
         this.activePhrase = null;
     }
@@ -119,6 +121,8 @@ class Game {
     *   Deducts 100 points from player score
     *   Run the 'setPlayerScore' function
     *   Increments 'missed'
+    *   If times missed is equal to three
+    *       show the 'activePhrase' 'hint' above the phrase display
     *   Then checks the value of 'missed' and if it is equal to '5'
     *       Run 'gameover' function with the boolean param 'false' (player lost)
     */
@@ -129,6 +133,9 @@ class Game {
         playerScore -= 100;
         this.setPlayersScore();
         this.missed++;
+        if (this.missed === 3) {
+            hintArea.innerHTML = `Hint: ${this.activePhrase.hint}`;
+        }
         if (this.missed === 5) {
             this.gameover(false);
         }
@@ -171,7 +178,9 @@ class Game {
     *       Sets '--color-win' var in CSS to a random color hex
     *       Sets overlay class to 'win'
     *       For each key that was not disabled, add 50 points to players score
-    *       'gameOverMessage' innerHTML is set to a winning message
+    *       If the player guessed the phrase without showing the hint, add an additional 500 points to their score
+    *           'gameOverMessage' is set to specified winning message
+    *       else 'gameOverMessage' innerHTML is set to a winning message
     *       Then runs 'reset' function
     */
 
@@ -192,7 +201,12 @@ class Game {
                     playerScore += 50;
                 }
             })
-            gameOverMessage.innerHTML = `You've won!<br>The phrase was: "${thePhrase}"<br>Your score was: ${playerScore}`
+            if (hintArea.innerHTML === '') {
+                playerScore += 500;
+                gameOverMessage.innerHTML = `You've won!<br>The phrase was: "${thePhrase}"<br>You didn't need a hint! +500 points!<br>Your score is: ${playerScore}`
+            } else {
+                gameOverMessage.innerHTML = `You've won!<br>The phrase was: "${thePhrase}"<br>Your score is: ${playerScore}`
+            }
             this.reset();
         };
     }
@@ -204,6 +218,7 @@ class Game {
     *   'phraseUl' innerHTML is set to '' to clear out any 'li' elements
     *   'keyboardBtn' is itterated through and removes the 'disabled' attribute from all onscreen keyboard buttons
     *   'heartContainers' is ittereated through and sets all player hearts images to 'liveHeart'
+    *   Clears out 'hintArea'
     */
     reset() {
         const phraseUL = document.querySelector('#phrase ul');
@@ -215,5 +230,7 @@ class Game {
         heartContainers.forEach(heart => {
             heart.innerHTML = '<img src="images/liveHeart.png" alt="Heart Icon" height="35" width="30">';
         });
+        hintArea.innerHTML = '';
+
     }
 }

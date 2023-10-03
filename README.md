@@ -17,11 +17,19 @@ Object-oriented program is the bases for this project.
 
 ## Features
 
-### Player Score
+### Hints (added a new 'h3' element to #phrase)
+
+Added hints to each phrase to help players discern what the phrase may be. The hint only shows if the player has missed three times.
+
+Each hint is specific to the phrase so no two hints are alike.
+
+### Player Score (added a new 'h3' element to #banner)
 
 Added a neat feature for players to accumulate a score based on the number of matching letters and the number of unused letters.
 
-Players will continue to accumulate a score each time they guess a phrase correctly but beware: If a player loses the game, their score will also be lost.
+Players will continue to accumulate a score each time they guess a phrase correctly, for each letter not clicked on while guessing, and if the player can guess the phrase without 
+
+triggering the hint. Beware: If a player loses the game, their score will also be lost.
 
 ### 'Keyup' event
 

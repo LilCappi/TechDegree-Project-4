@@ -11,11 +11,13 @@ const phraseUL = document.querySelector('#phrase ul');
 *
 *   This is the Phrase class which holds a constructor that sets:
 *   'phrase' to a lowercased version of 'phrase'
+*   'hint' to a hint that is displayed to help the player guess the phrase
 */
 
 class Phrase {
-    constructor(phrase){
+    constructor(phrase, hint){
         this.phrase = phrase.toLowerCase();
+        this.hint = hint;
     }
 
     /*  addPhraseToDisplay()
