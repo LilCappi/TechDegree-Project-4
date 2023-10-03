@@ -50,7 +50,7 @@ Some styles set in the base of the CSS form have been changed to personalize the
 
 .show border-radius = 50px (original 5px) 
 
-*(wanted a more round display when a matching letter is displayed to differintiate shown letters and hidden letters)*
+*(wanted a more round display when a matching letter is displayed to differintiate shown letters and hidden letters more)*
 
 .chosen background = #3b9233(green for correct) (original #3a3f58)
 
