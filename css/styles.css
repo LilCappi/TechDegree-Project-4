@@ -107,8 +107,6 @@ button {
   width: 30px;
 }
 
-
-
 .show {
   color: #fff;
   background-color: #243d91;
@@ -173,6 +171,22 @@ button {
   left: 0;
   right: 0;
   border-radius: 5px;
+}
+
+#hint {
+  color: #942cb4;
+  font-size: x-large;
+}
+
+#score {
+  border: 2px solid transparent;
+  background-color: #b9e618;
+  padding: 8px 8px 8px 8px;
+  width: 200px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: x-large;
 }
 
 .title {

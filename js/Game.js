@@ -11,7 +11,7 @@
 const overlay = document.getElementById('overlay');
 const heartContainers = document.querySelectorAll('#scoreboard li');
 const keyboardBtn = document.querySelectorAll('#qwerty button');
-const playerTotalScore = document.querySelector('.score');
+const playerTotalScore = document.querySelector('#score');
 const hintArea = document.getElementById('hint');
 
 /*  Game Class
